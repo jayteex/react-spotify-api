@@ -1,3 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner-container-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 18%;
+}
+
+.inner-container-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 18%;
+}
+
+
+
+/*
+
 .App {
   text-align: center;
 }
@@ -36,3 +64,5 @@
     transform: rotate(360deg);
   }
 }
+
+*/
