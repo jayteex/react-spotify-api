@@ -3,6 +3,7 @@ const Spotify = {
   clientId: 'cfb333ab3e0a423ba2dcae33afbbb3ca',
   redirectUri: 'http://localhost:3000/',
 
+  //Fetching the access token 
   async getAccessToken() {
     if (this.accessToken) {
       return this.accessToken;
@@ -31,6 +32,7 @@ const Spotify = {
     }
   },
 
+  //Search function 
   async search(term) {
     try {
       const accessToken = await this.getAccessToken();
@@ -50,6 +52,7 @@ const Spotify = {
       if (data.tracks) {
         return data.tracks.items.map((track) => ({
           id: track.id,
+          artist: track.artists[0].name,
           name: track.name,
           src: track.album.images[0].url,
           album: track.album.name,

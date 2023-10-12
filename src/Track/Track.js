@@ -27,6 +27,8 @@ function Track(props) {
     );
   };
 
+  const jsonString = JSON.stringify(props.track);
+
 
   return (
     <div className="Track">
@@ -34,6 +36,9 @@ function Track(props) {
         <h3>{props.track.name}</h3>
         <p>
           {props.track.artist} | {props.track.album}
+        </p>
+        <p>
+          {jsonString}
         </p>
       </div>
       {renderAction()}

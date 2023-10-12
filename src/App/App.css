@@ -2,20 +2,20 @@ h1 {
   text-align: center;
 }
 
-.outer-container {
+.app-outer-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.inner-container-left {
+.app-inner-container-left {
   display: flex;
   flex: 1;
   flex-direction: column;
   margin-left: 18%;
 }
 
-.inner-container-right {
+.app-inner-container-right {
   display: flex;
   flex: 1;
   flex-direction: column;

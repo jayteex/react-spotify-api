@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import Search from '../Search/Search.js';
-import Track from '../Track/Track.js';
-import Tracklist from '../Tracklist/Tracklist.js'
 import Results from '../Results/Results.js';
 import Playlist from '../Playlist/Playlist.js';
 import Spotify from "../SpotifyAPI/Spotify.js";
@@ -11,11 +9,13 @@ import Spotify from "../SpotifyAPI/Spotify.js";
 function App() {
 
 	const [searchResults, setSearchResults] = useState([]);
+
+	// The playlist was not implemented yet
 	const [playlistName, setPlaylistName] = useState('New Playlist');
 	const [playlistTracks, setPlaylistTracks] = useState([]);
 
-	const search = (term) => {
-		Spotify.search(term).then(setSearchResults);
+	const searchy = (searchyTerm) => {
+		Spotify.search(searchyTerm).then(setSearchResults);
 	};
 
 
@@ -24,17 +24,16 @@ function App() {
 		<div>
 			<h1>Jamming</h1>
 
-			<div className='outer-container'>
-				<Search onSearch={search} />
+			<div className='app-outer-container'>
+				<Search onSearch={searchy} />
 			</div>
 
-			<div className='outer-container'>
+			<div className='app-outer-container'>
 
-				<div className='inner-container-left'>
+				<div className='app-inner-container-left'>
 					<Results searchResults={searchResults} />
 				</div>
-
-				<div className='inner-container-right'>
+				<div className='app-inner-container-right'>
 					<Playlist />
 				</div>
 
