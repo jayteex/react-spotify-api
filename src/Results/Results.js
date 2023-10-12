@@ -6,7 +6,7 @@ function Results(props) {
   return (
     <div className='results-container'>
       <h2>Search Results</h2>
-      <Tracklist tracks={props.searchResults} onAdd={props.onAdd}/>
+      <Tracklist tracks={props.searchResultsFromAPI} onAdd={props.onAdd}/>
     </div>
   );
 };

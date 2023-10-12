@@ -13,10 +13,17 @@ function Search(props) {
 		props.onSearch(term);
 	};
 
+	//I added this function to hitting enter on the keyboard would also trigger the search
+	const handleKeyboardEnter = (e) => {
+		if (e.key === 'Enter') {
+			searchoFunction(); // Trigger the search when Enter key is pressed
+		}
+	  }
+
 	return (
 		<div className='search-container'>
 			<label>Search for your favorite music</label>
-			<input type='text' id='search' name='search' placeholder='Enter here' onChange={handleChange} />
+			<input onKeyDown={handleKeyboardEnter} type='text' id='search' name='search' placeholder='Enter here' onChange={handleChange} />
 			<button onClick={() => props.onSearch(term)}>Submit</button>
 		</div>
 	);

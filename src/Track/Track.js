@@ -13,7 +13,7 @@ function Track(props) {
 
   
   const renderAction = () => {
-    if (props.isRemoval) {
+    if (props.showRemoveButton) {
       return (
         <button className="Track-action" onClick={removeTrack}>
           -
@@ -37,9 +37,9 @@ function Track(props) {
         <p>
           {props.track.artist} | {props.track.album}
         </p>
-        <p>
-          {jsonString}
-        </p>
+      </div>
+      <div>
+        <img className="Track-img" src={props.track.src} alt={`Album cover of ${props.track.album}`} />
       </div>
       {renderAction()}
     </div>
