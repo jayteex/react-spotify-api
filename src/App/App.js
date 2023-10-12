@@ -28,7 +28,7 @@ function App() {
 
   const removeTrack = (track) => {
     setPlaylistTracks((prevStateOfPlaylist) =>
-      prevStateOfPlaylist.filter((currentTrack) => currentTrack.id !== track.id)
+      prevStateOfPlaylist.filter((everySingleTrackOneAfterTheOther) => everySingleTrackOneAfterTheOther.id !== track.id)
     );
   };
 
@@ -39,7 +39,8 @@ function App() {
   const savePlaylist = () => {
     const trackUris = playlistTracks.map((track) => track.uri);
 
-    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+    Spotify.savePlaylist(playlistName, trackUris)
+		.then(() => {
       setPlaylistName("New Playlist");
       setPlaylistTracks([]);
 
