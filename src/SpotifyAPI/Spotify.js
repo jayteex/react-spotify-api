@@ -1,5 +1,7 @@
 const clientId = 'cfb333ab3e0a423ba2dcae33afbbb3ca';
-const redirectUri = 'http://localhost:3000/';
+//This was the local URL, I changed it to the Netlify address where I host this page
+//const redirectUri = 'http://localhost:3000/'; 
+const redirectUri = 'https://playlist-creation.netlify.app/'
 let accessToken;
 
 const Spotify = {
