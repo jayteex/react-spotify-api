@@ -27,9 +27,6 @@ function Track(props) {
     );
   };
 
-  const jsonString = JSON.stringify(props.track);
-
-
   return (
     <div className="Track">
       <div className="Track-information">

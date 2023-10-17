@@ -4,8 +4,6 @@ import Search from '../Search/Search.js';
 import Results from '../Results/Results.js';
 import Playlist from '../Playlist/Playlist.js';
 import Spotify from "../SpotifyAPI/Spotify.js";
-import { useCallback } from 'react';
-
 
 function App() {
 
