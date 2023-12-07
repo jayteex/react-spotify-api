@@ -22,7 +22,7 @@ function Search(props) {
 
 	return (
 		<div className='search-container'>
-			<label>Search for your favorite music</label>
+			<label>Search for your favorite songs</label>
 			<input onKeyDown={handleKeyboardEnter} type='text' id='search' name='search' placeholder='Enter here' onChange={handleChange} />
 			<button onClick={() => props.onSearch(term)}>Submit</button>
 		</div>
