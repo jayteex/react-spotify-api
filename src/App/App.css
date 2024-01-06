@@ -22,6 +22,18 @@ h1 {
   margin-right: 18%;
 }
 
+@media screen and (max-width: 768px) {
+  .app-outer-container {
+    flex-direction: column;
+  }
+
+  .app-inner-container-left,
+  .app-inner-container-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 
 
 /*
