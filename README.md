@@ -22,7 +22,7 @@ In this application, users can search for music tracks via the Spotify API, and 
 
 ## Usage
 
-Please use your own Spotify API access. Add your own clientId here: src/SpotifyAPI/Spotify.js 
+The first time you enter something into the search field, you will be redirected to log into your Spotify account.  
 
 ## Technologies used
 
