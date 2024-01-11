@@ -24,6 +24,6 @@ In this application, users can search for music tracks via the Spotify API, and 
 
 Please use your own Spotify API access. Add your own clientId here: src/SpotifyAPI/Spotify.js 
 
-## Technologies uses
+## Technologies used
 
 React, JavaScript, CSS, HTML.
